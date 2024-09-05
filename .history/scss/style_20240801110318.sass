@@ -1,0 +1,29 @@
+//_variable.scss 
+$font-family: Roboto,sans-serif
+$font-family2: Shrikhand,cursive
+$box-shadow: 2px 2px 1px gray
+//_mixins.scss
+@mixin flex-center {
+  display: flex
+  justify-content: center
+}
+
+body {
+    font-family: $font-family
+}
+.header {
+    font-family: $font-family2
+    box-shadow: $box-shadow
+    padding: 1rem
+    @include  flex-center
+    width: 100%
+}
+    header  a.logo {
+        display: flex
+    }
+    header a.logo img {
+       height: 3rem 
+    }
+main{
+}
+section

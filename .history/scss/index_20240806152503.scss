@@ -1,0 +1,131 @@
+$color_1: rgb(71, 71, 71);
+$color_2: white;
+$color_3: violet;
+$font-family_1: "Roboto", sans-serif;
+$font-family_2: "Shrikhand", cursive;
+$background-color_1: rgb(235, 235, 235);
+$background-color_2: rgb(226, 43, 211);
+$background-color_3: rgb(216, 216, 216);
+
+* {
+    border: 1px solid red;
+}
+
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap";
+
+body {
+    font-family: $font-family_1;
+    margin: 0;
+}
+
+header {
+    font-family: $font-family_2;
+    box-shadow: 2px 2px 1px gray;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    a.logo {
+        display: flex;
+
+        img {
+            height: 2rem;
+        }
+    }
+}
+.search {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 1px gray;
+    background-color: $background-color_1;
+    padding: 1.5rem;
+    font-weight: 700;
+    gap: 0.25rem;
+
+    .fa-location {
+        font-size: 1rem;
+    }
+
+    input {
+        font-family: $font-family_1;
+        font-weight: bold;
+        border: none;
+        background: transparent;
+    }
+}
+section.top {
+    display: flex;
+    align-items: center;
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    p {
+        text-align: center;
+        color: $color_1;
+    }
+
+    button.btn-gradiant {
+        text-align: center;
+        color: $color_2;
+        background-color: $background-color_2;
+        border: none;
+        border-radius: 2em;
+        width: fit-content;
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    menu {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            button {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                background-color: $background-color_3;
+
+                &:active {
+                    i {
+                        color: $color_3;
+                    }
+                }
+
+                span {
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+section.restaurant {
+    background-color: $background-color_3;
+}
+
+.card {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 6em;
+        object-fit: cover;
+        object-position: center;
+    }
+}

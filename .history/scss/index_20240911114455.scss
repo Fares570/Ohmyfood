@@ -266,13 +266,14 @@ footer {
     }
     .footer_container {
         color: #FFF;
+
     }
     .logo_footer {
 
         p.title_footer{
             font-family: "Shrikhand", cursive;
             font-weight: normal;
-            font-size: 1.5rem;
+            font-size: 0.5rem;
             text-transform: lowercase;
             margin-bottom: 1.25rem;
             height: 0.5rem;
@@ -284,8 +285,5 @@ footer {
             display: flex;
             flex-direction: column;
         }
-    }
-    a {
-        color: #FFF;
     }
 }

@@ -220,21 +220,27 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-rating i:hover
   background-color: #FF79DA;
 }
 
-.footer {
+footer .homepage_footer {
   background: #353535;
-  color: #FFF;
   display: flex;
-  flex-direction: column;
+  align-content: flex-start;
 }
-.footer .logo img {
+footer .footer_container {
+  color: #FFF;
+}
+footer .logo_footer p.title_footer {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 0.5rem;
+  font-size: 1.5rem;
   text-transform: lowercase;
   margin-bottom: 1.25rem;
   height: 0.5rem;
 }
-.footer .footer-link .footer-part {
+footer .footer-link .footer-list {
+  color: #FFF;
   display: flex;
   flex-direction: column;
+}
+footer a {
+  color: #FFF;
 }/*# sourceMappingURL=index.css.map */

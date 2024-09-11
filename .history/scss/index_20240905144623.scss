@@ -259,33 +259,25 @@ section.restaurant {
 }
 
 footer {
-    .homepage_footer {
-        background: #353535;
-        display: flex;
-        align-content: flex-start;
-    }
-    .footer_container {
-        color: #FFF;
-    }
-    .logo_footer {
+    background: #353535;
+    color: #FFF;
+    display: flex;
+    align-content: flex-start;
 
-        p.title_footer{
+    .logo {
+        img {
             font-family: "Shrikhand", cursive;
             font-weight: normal;
-            font-size: 1.5rem;
+            font-size: 0.5rem;
             text-transform: lowercase;
             margin-bottom: 1.25rem;
             height: 0.5rem;
         }
     }
     .footer-link{
-        .footer-list{
-            color: #FFF;
+        .footer-part{
             display: flex;
             flex-direction: column;
         }
-    }
-    a {
-        color: #FFF;
     }
 }

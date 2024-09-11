@@ -98,27 +98,27 @@ img.top {
   transition: opacity 0.3s ease;
 }
 
-.footer {
+footer .homepage_footer {
   background: #353535;
+  display: flex;
+  align-content: flex-start;
+}
+footer .footer_container {
   color: #FFF;
 }
-.footer a.logo {
+footer .logo_footer p.title_footer {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   text-transform: lowercase;
   margin-bottom: 1.25rem;
+  height: 0.5rem;
 }
-
-.footer-part a .fa-utensils {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+footer .footer-link .footer-list {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
 }
-.footer-part a .fa-handshake-angle {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+footer a {
+  color: #FFF;
 }/*# sourceMappingURL=restaurant.css.map */

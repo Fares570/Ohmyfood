@@ -221,7 +221,7 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-rating i:hover
 }
 
 footer .homepage_footer {
-  background: #707070;
+  background: #353535;
   display: flex;
   align-content: flex-start;
 }
@@ -231,7 +231,7 @@ footer .footer_container {
 footer .logo_footer p.title_footer {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   text-transform: lowercase;
   margin-bottom: 1.25rem;
   height: 0.5rem;
@@ -240,7 +240,4 @@ footer .footer-link .footer-list {
   color: #FFF;
   display: flex;
   flex-direction: column;
-}
-footer a {
-  color: #FFF;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index_20240911114455.css.map */

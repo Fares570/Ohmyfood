@@ -221,7 +221,7 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-rating i:hover
 }
 
 footer .homepage_footer {
-  background: #707070;
+  background: #353535;
   display: flex;
   align-content: flex-start;
 }
@@ -241,6 +241,6 @@ footer .footer-link .footer-list {
   display: flex;
   flex-direction: column;
 }
-footer a {
+footer .footer-link a {
   color: #FFF;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index_20240911114615.css.map */

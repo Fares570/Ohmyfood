@@ -145,10 +145,6 @@ section.fonctionnement {
                 flex-wrap: nowrap;
                 font-weight: bold;
 
-                .step{
-                    padding-left: 30px;
-                }
-
                 &:hover {
                     i {
                         color: violet;
@@ -165,11 +161,10 @@ section.fonctionnement {
                     height: 1.5em;
                     display: flex;
                     justify-content: center;
-                    background-color: #9356DC ;
+                    background-color: #FF79DA;
                     position: absolute;
-                    top: 1em;
+                    top: 0.7em;
                     left: -0.7em;
-                    padding: 8px;
                 }
 
                 span {
@@ -224,14 +219,12 @@ section.restaurant {
                             display: flex;
                             flex-direction: column;
                             font-family: $font-family_1;
-                            align-items: flex-start;
-                            padding-left: 5px;
                         }
 
                         h3.card-title {
                             font-size: 1em;
                             margin: 0;
-                            font-weight: 600;
+                            font-weight: 900;
                         }
 
                         p.card-subtitle {
@@ -251,8 +244,6 @@ section.restaurant {
                         i {
                             font-weight: 700;
                             text-align: right;
-                            font-size: 1.5rem;
-                            background-color: transparent;
 
                             &:hover {
                                 background-clip: text;

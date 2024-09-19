@@ -20,9 +20,11 @@ header {
   align-items: center;
   position: sticky;
 }
+
 header a.logo {
   display: flex;
 }
+
 header a.logo img {
   height: 1.5em;
   width: 8em;
@@ -34,21 +36,27 @@ section.top {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+  padding: 1em;
 }
+
 section.top .search {
   display: flex;
   justify-content: center;
   box-shadow: 2px 2px 1px gray;
   box-sizing: border-box;
-  background-color: rgb(235, 235, 235);
-  padding: 2.5rem;
+  background-color: rgb(220, 218, 218);
+  padding: 1rem;
+  width: 100%;
   font-weight: 700;
   gap: 0.25rem;
   flex: 1;
 }
+
 section.top .search i.fa-location {
   font-size: 1rem;
 }
+
 section.top .search input {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -57,23 +65,44 @@ section.top .search input {
   width: 8em;
   justify-content: center;
 }
+
+section.top .search input::-moz-placeholder {
+  color: black;
+}
+
 section.top .search input::placeholder {
   color: black;
 }
+
 section.top h1 {
   text-align: center;
 }
+
 section.top p {
   text-align: center;
+  margin-top: -1px;
 }
+
 section.top button.btn-gradiant {
   text-align: center;
   color: white;
-  background-color: #FF79DA;
+  display: inline-block;
+  background-color: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background-image: linear-gradient(rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  z-index: 1;
   border: none;
   border-radius: 2em;
+  width: -moz-fit-content;
   width: fit-content;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
 
@@ -82,16 +111,20 @@ section.fonctionnement {
   flex: 1;
   flex-direction: column;
   padding: 1em;
+  font-family: "Roboto", sans-serif;
 }
+
 section.fonctionnement .main-wrapper {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
+
 section.fonctionnement h2 {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 section.fonctionnement menu {
   display: flex;
   flex-direction: column;
@@ -100,14 +133,16 @@ section.fonctionnement menu {
   margin: 0;
   padding: 0;
 }
+
 section.fonctionnement menu li {
   width: 100%;
   display: flex;
   list-style: none;
   position: relative;
 }
+
 section.fonctionnement menu li button {
-  gap: 2rem;
+  gap: 0.5rem;
   border: none;
   box-sizing: border-box;
   cursor: pointer;
@@ -122,29 +157,44 @@ section.fonctionnement menu li button {
   flex-direction: row;
   flex-wrap: nowrap;
   font-weight: bold;
+  background: #F6F6F6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
+
 section.fonctionnement menu li button .step {
-  padding-left: 30px;
+  padding-left: 3px;
+  margin: 0 1.25rem 0 1.625rem;
+  font-size: 1.25rem;
+  color: #7E7E7E;
 }
+
 section.fonctionnement menu li button:hover i {
-  color: violet;
+  color: #FF79DA;
 }
+
 section.fonctionnement menu li button::before {
   align-items: center;
+  font-size: 0.95rem;
+  text-align: center;
   color: white;
   counter-increment: section;
   content: counter(section);
-  border-radius: 100%;
-  width: 1.5em;
-  height: 1.5em;
+  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  width: 1.625rem;
+  height: 1.625rem;
   display: flex;
   justify-content: center;
   background-color: #9356DC;
   position: absolute;
   top: 1em;
-  left: -0.7em;
-  padding: 8px;
+  left: -1rem;
+  padding: 2px;
 }
+
 section.fonctionnement menu li button span {
   font-weight: bold;
   font-size: 1rem;
@@ -154,36 +204,56 @@ section.restaurant {
   background-color: #F6F6F6;
   padding: 1em;
 }
+
+section.restaurant .main-wrapper h2 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+  text-align: left;
+}
+
 section.restaurant .main-wrapper .menu-cards {
   display: flex;
   flex-direction: column;
   gap: 3em;
   width: 89%;
 }
+
 section.restaurant .main-wrapper .menu-cards a {
   display: flex;
   text-decoration: none;
   color: black;
   width: 100%;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card {
   border-radius: 1.5em;
   width: 100%;
   background: white;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card img {
   width: 100%;
   height: 10em;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   border-radius: 2em 2em 0 0;
 }
+
+section.restaurant .main-wrapper .menu-cards a article.card .card-icone {
+  z-index: 1;
+}
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-content {
   display: flex;
   padding: 0.5em;
   flex: 1;
   justify-content: space-between;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-content .card-txt {
   display: flex;
   flex-direction: column;
@@ -191,15 +261,28 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-content .card-
   align-items: flex-start;
   padding-left: 5px;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-content h3.card-title {
   font-size: 1em;
   margin: 0;
   font-weight: 600;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-content p.card-subtitle {
   font-size: 1em;
   margin: 0;
 }
+
+section.restaurant .main-wrapper .menu-cards a article.card .card-content .card-icone {
+  padding: 0.5rem 0.75rem;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 0.875rem;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-rating {
   display: flex;
   align-items: center;
@@ -208,13 +291,16 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-rating {
   height: 2.5em;
   text-align: center;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-rating i {
   font-weight: 700;
   text-align: right;
   font-size: 1.5rem;
   background-color: transparent;
 }
+
 section.restaurant .main-wrapper .menu-cards a article.card .card-rating i:hover {
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-color: #FF79DA;
@@ -225,9 +311,11 @@ footer .homepage_footer {
   display: flex;
   align-content: flex-start;
 }
+
 footer .footer_container {
   color: #FFF;
 }
+
 footer .logo_footer p.title_footer {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
@@ -236,13 +324,15 @@ footer .logo_footer p.title_footer {
   margin-bottom: 1.25rem;
   height: 0.5rem;
 }
+
 footer .footer-link .footer-list {
   color: #FFF;
   display: flex;
   flex-direction: column;
 }
+
 footer a {
   color: #FFF;
-}
+} 
 
 /*# sourceMappingURL=index.css.map */

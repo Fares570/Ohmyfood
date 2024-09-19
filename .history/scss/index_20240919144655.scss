@@ -318,56 +318,45 @@ section.restaurant {
                         }
                     }
 
-                    .card-rating {
-                        display: flex;
+                    .favorite__restaurant .card-rating {
+                        height: 2rem;
+                        width: 2rem;
+                        padding: 0;
+                        display: inline-block;
                         align-items: center;
                         justify-content: center;
-                        width: 2em;
-                        height: 2.5em;
-                        text-align: center;
+                        position: relative;
+                        overflow: hidden;
 
-                        .favorite__restaurant {
-                            height: 2rem;
-                            width: 2rem;
-                            padding: 0;
-                            display: inline-block;
-                            align-items: center;
-                            justify-content: center;
-                            position: relative;
-                            overflow: hidden;
-
-                            .icon-fill {
-                                @include favorite-icone-fill;
-                                transition: 0.2s linear;
-                            }
-
-                            .icon-empty {
-                                @include favorite-icone-empty;
-                                transition: 0.2s linear;
-                            }
-
-                            &:hover .icon-fill {
-                                opacity: 1;
-                            }
-
-                            &:hover .icon-empty {
-                                opacity: 0;
-                            }
+                        .icon-fill {
+                            @include favorite-icone-fill;
+                            transition: 0.2s linear;
                         }
 
+                        .icon-empty {
+                            @include favorite-icone-empty;
+                            transition: 0.2s linear;
+                        }
 
+                        &:hover .icon-fill {
+                            opacity: 1;
+                        }
 
-                        i {
-                            font-weight: 700;
-                            text-align: right;
-                            font-size: 1.5rem;
-                            background-color: transparent;
+                        &:hover .icon-empty {
+                            opacity: 0;
+                        }
+                    }
 
-                            &:hover {
-                                background-clip: text;
-                                color: transparent;
-                                background-color: $background-color_2
-                            }
+                    i {
+                        font-weight: 700;
+                        text-align: right;
+                        font-size: 1.5rem;
+                        background-color: transparent;
+
+                        &:hover {
+                            background-clip: text;
+                            color: transparent;
+                            background-color: $background-color_2
                         }
                     }
                 }

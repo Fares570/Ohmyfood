@@ -8,11 +8,11 @@ body.html {
 body {
   counter-reset: section;
   text-align: center;
+  margin: 0;
 }
 
 header {
   font-family: "Shrikhand", cursive;
-  box-shadow: 2px 2px 1px gray;
   box-sizing: border-box;
   padding: 1em;
   display: flex;
@@ -35,19 +35,23 @@ section.top {
   align-items: center;
   background-color: #F6F6F6;
   font-family: "Roboto", sans-serif;
-  padding: 1em;
+  padding: 0;
+  padding-bottom: 20px;
 }
 section.top .search {
   display: flex;
   justify-content: center;
-  box-shadow: 2px 2px 1px gray;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  background: #EAEAEA;
   box-sizing: border-box;
-  background-color: rgb(220, 218, 218);
   padding: 1rem;
+  padding-left: 80px;
   width: 100%;
   font-weight: 700;
-  gap: 0.25rem;
+  gap: 17px;
   flex: 1;
+  z-index: 1;
+  align-items: center;
 }
 section.top .search i.fa-location {
   font-size: 1rem;
@@ -57,7 +61,7 @@ section.top .search input {
   font-weight: bold;
   border: none;
   background: transparent;
-  width: 8em;
+  font-size: 20px;
   justify-content: center;
 }
 section.top .search input::-moz-placeholder {
@@ -196,7 +200,7 @@ section.restaurant .main-wrapper .menu-cards {
   display: flex;
   flex-direction: column;
   gap: 3em;
-  width: 89%;
+  width: 100%;
 }
 section.restaurant .main-wrapper .menu-cards a {
   display: flex;
@@ -208,6 +212,7 @@ section.restaurant .main-wrapper .menu-cards a article.card {
   border-radius: 1.5em;
   width: 100%;
   background: white;
+  position: relative;
 }
 section.restaurant .main-wrapper .menu-cards a article.card img {
   width: 100%;
@@ -217,9 +222,8 @@ section.restaurant .main-wrapper .menu-cards a article.card img {
   -o-object-position: center;
      object-position: center;
   border-radius: 2em 2em 0 0;
-}
-section.restaurant .main-wrapper .menu-cards a article.card .card-icone {
-  z-index: 1;
+  display: block;
+  position: relative;
 }
 section.restaurant .main-wrapper .menu-cards a article.card .card-content {
   display: flex;
@@ -251,6 +255,7 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-content .card-
   top: 15px;
   right: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  position: absolute;
 }
 section.restaurant .main-wrapper .menu-cards a article.card .card-rating {
   display: flex;
@@ -259,6 +264,40 @@ section.restaurant .main-wrapper .menu-cards a article.card .card-rating {
   width: 2em;
   height: 2.5em;
   text-align: center;
+}
+section.restaurant .main-wrapper .menu-cards a article.card .card-rating .favorite__restaurant {
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+section.restaurant .main-wrapper .menu-cards a article.card .card-rating .favorite__restaurant .icon-fill {
+  opacity: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.2s linear;
+}
+section.restaurant .main-wrapper .menu-cards a article.card .card-rating .favorite__restaurant .icon-empty {
+  opacity: 1;
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.2s linear;
+}
+section.restaurant .main-wrapper .menu-cards a article.card .card-rating .favorite__restaurant:hover .icon-fill {
+  opacity: 1;
+}
+section.restaurant .main-wrapper .menu-cards a article.card .card-rating .favorite__restaurant:hover .icon-empty {
+  opacity: 0;
 }
 section.restaurant .main-wrapper .menu-cards a article.card .card-rating i {
   font-weight: 700;

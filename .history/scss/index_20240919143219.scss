@@ -7,32 +7,6 @@ $background-color_1: #9356DC;
 $background-color_2: #FF79DA;
 $background-color_3: rgb(216, 216, 216);
 
-@mixin favorite-restaurant {
-    background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-}
-
-@mixin favorite-icone-empty {
-    opacity: 1;
-    font-size: 1.6rem;
-    cursor: pointer;
-    position: absolute;
-}
-
-@mixin favorite-icone-fill {
-    opacity: 0;
-    font-size: 1.6rem;
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-    background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-}
-
 
 @import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap";
@@ -256,7 +230,7 @@ section.restaurant {
             display: flex;
             flex-direction: column;
             gap: 3em;
-            width: 100%;
+            width: 89%;
 
             a {
                 display: flex;
@@ -268,7 +242,7 @@ section.restaurant {
                     border-radius: 1.5em;
                     width: 100%;
                     background: white;
-                    position: relative;
+                    
 
                     img {
                         width: 100%;
@@ -325,37 +299,6 @@ section.restaurant {
                         width: 2em;
                         height: 2.5em;
                         text-align: center;
-
-                        .favorite__restaurant {
-                            height: 2rem;
-                            width: 2rem;
-                            padding: 0;
-                            display: inline-block;
-                            align-items: center;
-                            justify-content: center;
-                            position: relative;
-                            overflow: hidden;
-
-                            .icon-fill {
-                                @include favorite-icone-fill;
-                                transition: 0.2s linear;
-                            }
-
-                            .icon-empty {
-                                @include favorite-icone-empty;
-                                transition: 0.2s linear;
-                            }
-
-                            &:hover .icon-fill {
-                                opacity: 1;
-                            }
-
-                            &:hover .icon-empty {
-                                opacity: 0;
-                            }
-                        }
-
-
 
                         i {
                             font-weight: 700;

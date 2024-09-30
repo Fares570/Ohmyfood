@@ -8,6 +8,11 @@ body {
   background-color: white;
 }
 
+header .fa-solid {
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+}
+
 header a.logo {
   display: flex;
   justify-content: center;

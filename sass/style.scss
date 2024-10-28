@@ -1,0 +1,688 @@
+@import "mixins.scss";
+@import "animations.scss";
+@import "variables.scss";
+
+
+/* Mise en page du loader */
+body {
+   
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    font-family: $font-family_1;
+    width: 100%;
+
+
+.block__loader {
+
+	background-color:white;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display:flex;
+  	-webkit-box-pack:center;
+  	-ms-flex-pack:center;
+  	justify-content:center;
+  	-webkit-box-align:center;
+  	-ms-flex-align:center;
+  	align-items:center;
+	z-index:4;
+	position:fixed;
+  	top: 0;
+  	left:0;
+  	width:100%;
+  	height:100vh;
+  	animation: bk 3s ease-in forwards;
+  	-moz-animation: bk 3s ease-in forwards;
+   /* Firefox */
+  -webkit-animation: bk 3s ease-in forwards;
+  	/* Safari et Chrome */
+  	-o-animation: bk	3s	ease-in	forwards;
+  /* Opera */
+  
+  }
+  
+
+  .loader {
+
+	width:100px;
+  	height:100px;
+  	border-radius:50%;
+  	border:10px solid #9356DC;/* Couleur principale du loader */
+    border-top-color:#FF79DA;/* Couleur du dessus du loader */
+  	border-bottom-color:#99E2D0;
+  	z-index:4;
+  	animation: spin 3000ms ease-in forwards;
+  	-moz-animation: spin 3000ms ease-in forwards;
+  /* Firefox */
+  	-webkit-animation: spin 3000ms ease-in forwards;
+  /* Safari et Chrome */
+  -o-animation: spin 3000ms ease-in forwards;
+  /* Opera */
+  }
+  
+
+.main-container {
+    width: 100%;
+
+  
+}
+}
+
+/*mise en style du header**/
+header {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	width: auto;
+	justify-content: space-around;
+	align-items: center;
+	img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 36px;
+	margin: 14px auto;
+	@media screen and (min-width: 1024px) {
+		.img {
+			width: 200px;
+		}
+		
+	}
+	}
+	
+}
+.localisation {
+	display: flex;
+	background-color: #eee;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	text-align: center;
+	height: 50px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);	
+	@media screen and (min-width: 1024px) {
+		.localisation {
+			box-shadow: none;
+		}
+	}
+	
+}
+.icone-localisation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 16px;
+	width: 18px;
+	color: $color_1;
+	margin-right: 17px;
+	
+}
+.fa-location-dot {
+	font-size: 1rem;
+	border: none;
+}
+input {
+	border: none;
+	background-color: #eee;
+	color: $color_1;
+	outline: none;
+	width: 115px;
+	&::placeholder {
+		color: $color_1;
+		font-size: 1rem;
+		font-weight: 500;
+		opacity: 1;
+		width:100%;
+	}
+}
+
+/* *******section menu****/
+.section-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	padding-right: 0;
+	padding-left: 0;
+	background-color: $background-color_1;
+	
+	h2{
+		text-decoration: none;
+		color: $color_1;
+		font-weight: 600;
+		text-align: center;
+		margin: 0;
+		padding: 10px;
+		padding-right: 50px;
+		padding-left: 50px;
+		font-size: 24px;
+	}
+	p {
+		font-size: 18px;
+		text-decoration: none;
+		color: $color_1;
+		text-align: center;
+		padding: 10px;
+		margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+		
+	}
+    .boutton-text {
+		@include boutton;
+	}
+
+}
+
+/*section fonctionnement*/
+.fonctionnement {
+	display: flex;
+	flex-direction: column;
+	padding-top: 15px;
+	flex-wrap: wrap;
+	gap: 15px;
+	//width: 100%;
+	padding-bottom: 50px;
+	align-content: center;
+	background-color: $background-color_3;
+	@media all and (min-width:1024px) {
+		
+		margin-left: 40px;
+margin-right: 40px;
+}
+	h2{
+		padding-left: 20px;
+	}
+	.choix {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 72px;
+		border-radius: 20px;
+		padding: 4px 30px;
+		padding-right: 0;
+		gap: 30px;
+		background-color: $background-color_1;
+		box-shadow: 0 4px 10px 0 #d5d5d5;
+		width: 80%;
+		position: relative;
+		flex-basis: 100%;
+		i{
+			color: $color_4;
+		}
+		p{
+			font-weight: bold;
+			font-size: 16px;
+			@media all and (min-width:1024px) {
+				font-size: 14px;
+			}
+		}
+		&:hover{
+			i{
+				cursor: pointer;
+				color: $color_3;
+			}
+		}
+	}
+	
+}
+.fonctionnement-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 95%;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin: auto;
+	gap: 20px;
+	align-items: center;
+	@media all and (min-width:1024px) {
+			width:80%;
+			flex-direction: row;
+			justify-content: space-between;
+		    margin-left: 40px;
+    margin-right: 40px;
+}
+		}
+
+.fonctionnement-number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+	color: $color_5;
+	background-color: $background-color_2;
+}
+.choix {
+	.fonctionnement-number {
+		position: absolute;
+		left: -13px;
+		z-index: 1;
+	}
+}
+/*restaurant**/
+.restaurant {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: $background-color_1;
+	padding-bottom: 50px;
+	@media screen and (min-width:1024px){
+        align-items: center; 
+        justify-content: center;
+        padding:30px 0 30px 0 ;
+        
+
+    }
+	h2 {
+		padding-left: 20px;
+		margin: 0px;
+		padding-top: 20px;
+
+		@media screen and (min-width:1024px){
+			padding-left: 10px;
+			padding-right: 68%;
+			padding-bottom: 20px;
+			
+	
+		}
+		
+	}
+}
+.restaurant-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media screen and (min-width:1024px){
+        gap:50px;
+        flex-direction: row;
+        align-items: center;
+        flex-basis: 100%;
+		justify-content: center;
+		width: 78%;
+    }
+}
+.restaurant-card-content {
+	width: 100%;
+	background-color: $background-color_3;
+	padding: 5px;
+	margin-top: 33px;
+	border-radius: 15px;
+	box-shadow: 5px 5px 10px #DADADA;
+	text-decoration: none;
+	color: $color_6;
+	position: relative; // Ajout de position relative pour contenir les éléments enfants positionnés absolument
+	@media screen and (min-width:1024px){
+       width:45%;
+	   margin-top: 0px;
+    }
+    
+	.markerinfo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		height: 30px;
+		border-radius: 2px;
+		background-color: $background-color_4;
+		color: $color_7;
+		font-weight: 500;
+		padding: 5px 10px; 
+		position: absolute;
+		top: 10px; //l'espace par rapport au haut
+        right: 15px; //l'espace par rapport à la droite
+		z-index: 1;
+	
+	}
+	.restaurant-img {
+		width: 100%;
+		height: 124px;
+		object-fit: cover;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		
+	}
+	
+}
+.card-title-rest {
+	margin: 1px 0px 8px 15px;
+}
+.card-subtitle-rest {
+	margin: 1px 0px 8px 15px;
+}
+/* mise en style du coeur */
+
+.menu-favorite {
+	@include menu-favorite;
+}
+
+/*Footer Home Page et Menus */
+footer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color:  $background-color_5;
+	color: $color_8;
+	
+	h2{
+		font-family: $font-family_2;
+		font-size: 18px;
+		margin : 0;
+		margin-top: 10px;
+		padding-left: 20px;
+	}
+	.propos {
+		display: flex;
+		//width: 100%;
+		flex-direction: column;
+		gap: 7px;
+		padding-left: 20px;
+	}
+	a {
+		display: flex;
+		gap: 11px;
+		align-items: flex-start;
+		font-weight: 500;
+		color:$color_8 ;
+		text-decoration: none;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-left: 0;
+	}
+	i {
+		width: 11px;
+		height: 13px;
+		font-size: 14px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	footer {
+		flex-flow: row-reverse;
+		padding: 30px;
+		gap: 90px;
+		.propos{
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: flex-end;
+			gap: 15px;
+		}
+	}
+}
+ /* mise en style des pages restaurants */
+
+ .header-menu{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//padding-right: 100px;
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		//gap: 42px;
+        justify-content: space-between;
+		a{
+			text-decoration: none;
+		}
+        i {
+            margin-left: 17px;
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+			color: $color_6;
+            
+           }
+		   div{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 36px;
+			margin: 14px auto;
+		
+		   }
+    }
+	  
+  }
+   
+  
+ .menu {
+    margin-bottom: -60px;
+    img {
+      width: 100%;
+      height: 375px;
+      object-fit: cover;
+      display: flex;
+      margin: 0 auto;
+      
+    }
+	@media all  and ((min-width:1024px)) {
+	&-cont{
+
+		display: flex;
+    justify-content: center;
+	}
+}
+   	 	&-container {
+     	 background-color: #f6f6f6;
+      	border-top-left-radius: 40px;
+      	border-top-right-radius: 40px;
+      	transform: translate(0px, -80px);
+		  padding-bottom: 20px;
+ @media all  and ((min-width:1024px)) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	width: 75%;
+	.submenu{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+  }
+
+  
+
+    	}
+    	&-resto {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 20px;
+      padding-left: 20px;
+	  gap:100px;
+	  h1 {
+        font-family: "Shrikhand", cursive;
+      	}
+		
+     .menu-favorite {
+	@include menu-favorite;
+	
+	.icon-fill,
+  .icon-empty {
+	position: absolute;
+    right: 5px;
+    top: -10px;
+    font-size: 25.6px;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+      }
+
+
+    }
+
+	
+
+    &-categorie {
+		
+		opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+		
+      h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+		border-bottom: solid 3px #99E2D0;
+		width:50px;
+		padding-bottom: 8px;
+		font-weight: 50;
+		
+       }
+    }
+  
+    &-card {
+		animation-fill-mode: both;
+      background-color:$color_5;
+      border-radius: 20px;
+      padding: 15px  0 10px;
+      margin-bottom: 15px;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      
+      box-shadow: -1px 6px 10px 2px rgb(166 166 166 / 34%);
+	  height: 72px;
+          padding-left: 20px;
+
+	  &_validate {
+        text-align: center;
+        top: 0;
+        width:70px;
+        height: 100px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+		right: 0;
+		position: absolute; 
+		overflow: hidden; /* Cela permettra de cacher l'icône à l'extérieur de son conteneur */
+		transition: 0.7s ease-in-out;
+        i {
+			width: 59px;
+			//height: 69px;
+          color:$color_5;
+          font-size: 24px;
+		  position: absolute; /* Position absolue pour placer l'icône en dehors de son conteneur d'origine */
+			right: -20px;
+			top: 40px; /* Initialiser l'icône à l'extérieur du conteneur */
+			transition: right 0.5s ease-in-out; /* Ajout d'une transition sur la propriété "right" */
+			//transition: right 0.5s ease-in-out, transform 1s ease-in-out;
+			
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        .menu-card_validate {
+
+			background-color: #99E2D0;
+			transition: 0.7s ease-in-out;
+          i {
+			overflow: visible;
+			//transform: rotate(360deg);
+			left: 5px;
+			top:40px;
+			right: 0; /* Déplacer l'icône à l'intérieur du conteneur lorsqu'il est survolé */
+			animation-delay: 0.3S;
+			
+		}
+
+        }
+      }
+      &_content{
+          width: 100%;
+          transition: 0.8s ease-in-out;
+		  &:hover{
+			width: calc(100% - 100px);
+			transition: 0.7s ease-in-out;
+		   }
+      }
+      &_title {
+        h3 {
+          font-family: "Roboto";
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        p {
+          margin: 0;
+          word-wrap: break-word;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      &_text {
+        display: flex;
+		align-items: flex-start;
+        justify-content: space-between;
+        padding-right: 20px;
+        p:nth-child(1){
+			width: 100%;
+		   white-space: nowrap;
+		   overflow: hidden;
+		   text-overflow: ellipsis;
+		 }
+        
+      }
+    }
+  
+}
+  .entree{
+	flex: 1;
+	
+    margin-bottom: 36px;
+    padding-left: 10px;
+	animation: appear 1s ease forwards;
+	padding-right: 10px;
+	@media all  and ((min-width:1024px)) {
+		width: 150%;
+  }
+  }
+  .plats{
+	flex: 1;
+	
+    margin-bottom:36px;
+    padding-left: 10px;
+	animation: appear 1s ease forwards 0.5s;
+	padding-right: 10px;
+	@media all  and ((min-width:1024px)) {
+		
+		width: 150%;
+  }
+  }
+  .dessert{
+	flex: 1;
+	
+	animation: appear 1s ease forwards 1s;
+    padding-left: 10px;
+	padding-right: 10px;
+	@media all  and ((min-width:1024px)) {
+			width: 150%;
+		
+	  }
+  }
+
+  .boutton-comm{
+    @include boutton;
+	margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-right: auto;
+  }
+
+  /*media queries****/
+  
+ 
